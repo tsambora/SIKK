@@ -23,6 +23,7 @@ class CaseDetailViewController: UIViewController, PagingMenuControllerDelegate {
         phase3.title = "Phase 3"
         
         let viewControllers = [phase1, phase2, phase3]
+        
         let options = PagingMenuOptions()
         options.menuHeight = 50
         options.selectedBackgroundColor = UIColor.clearColor()
