@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_logo" translatesAutoresizingMaskIntoConstraints="NO" id="rt8-FG-wbj">
+                    <rect key="frame" x="225" y="270" width="150" height="60"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="155" id="0KH-pF-BOj"/>
+                        <constraint firstAttribute="width" constant="150" id="2PQ-s7-bQF"/>
+                        <constraint firstAttribute="width" constant="389" id="4NV-bB-dIG"/>
+                        <constraint firstAttribute="height" constant="155" id="6AA-Vg-Iaf"/>
+                        <constraint firstAttribute="width" constant="389" id="9vs-oM-3fB"/>
+                        <constraint firstAttribute="height" constant="60" id="DFC-p0-OWp"/>
+                        <constraint firstAttribute="width" secondItem="rt8-FG-wbj" secondAttribute="height" multiplier="389:155" id="DQD-yv-qNr"/>
+                        <constraint firstAttribute="width" secondItem="rt8-FG-wbj" secondAttribute="height" multiplier="389:155" id="Ev5-MY-sfZ"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="0KH-pF-BOj"/>
+                            <exclude reference="4NV-bB-dIG"/>
+                            <exclude reference="6AA-Vg-Iaf"/>
+                            <exclude reference="9vs-oM-3fB"/>
+                            <exclude reference="DQD-yv-qNr"/>
+                            <exclude reference="Ev5-MY-sfZ"/>
+                        </mask>
+                    </variation>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="0.32156862749999998" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="rt8-FG-wbj" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="096-QA-sWB"/>
+                <constraint firstItem="rt8-FG-wbj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="106" id="5g1-DM-rsM"/>
+                <constraint firstItem="rt8-FG-wbj" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="8mf-mf-i9m"/>
+                <constraint firstItem="rt8-FG-wbj" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Ddt-3o-rWT"/>
+                <constraint firstItem="rt8-FG-wbj" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="NtI-Ln-hFB"/>
+                <constraint firstItem="rt8-FG-wbj" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="RD3-Gt-v8y"/>
+                <constraint firstAttribute="bottom" secondItem="rt8-FG-wbj" secondAttribute="bottom" constant="223" id="Vma-Z8-SEH"/>
+                <constraint firstItem="rt8-FG-wbj" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="pVr-qX-kr7"/>
+                <constraint firstItem="rt8-FG-wbj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="222" id="q2c-BL-gZj"/>
+                <constraint firstAttribute="trailing" secondItem="rt8-FG-wbj" secondAttribute="trailing" constant="105" id="sXZ-aQ-yme"/>
+                <constraint firstItem="rt8-FG-wbj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="106" id="weD-nm-VC5"/>
+                <constraint firstItem="rt8-FG-wbj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="222" id="ya3-Ms-iEt"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="096-QA-sWB"/>
+                    <exclude reference="5g1-DM-rsM"/>
+                    <exclude reference="8mf-mf-i9m"/>
+                    <exclude reference="Ddt-3o-rWT"/>
+                    <exclude reference="Vma-Z8-SEH"/>
+                    <exclude reference="pVr-qX-kr7"/>
+                    <exclude reference="q2c-BL-gZj"/>
+                    <exclude reference="sXZ-aQ-yme"/>
+                    <exclude reference="weD-nm-VC5"/>
+                    <exclude reference="ya3-Ms-iEt"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+    <resources>
+        <image name="img_logo" width="389" height="155"/>
+    </resources>
+</document>
