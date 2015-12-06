@@ -7,20 +7,33 @@
 //
 
 import UIKit
+import MZFormSheetPresentationController
 
 class SuspectStickersViewController: UIViewController {
-    
+        
     @IBOutlet private weak var tablePost: UITableView!
+    @IBOutlet private weak var buttonAddSticker: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         tablePost.registerNib(UINib(nibName: "SuspectStickersTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func addSticker(sender: UIButton){
+        
+        let stickersViewController = self.storyboard!.instantiateViewControllerWithIdentifier("StickersViewController") as! StickersViewController
+        let formSheetController = MZFormSheetPresentationViewController(contentViewController: stickersViewController)
+        formSheetController.presentationController?.contentViewSize = CGSizeMake(self.view.bounds.width - 15, 400)
+        formSheetController.presentationController?.shouldDismissOnBackgroundViewTap = true
+        
+        self.presentViewController(formSheetController, animated: true, completion: nil)
+
     }
     
 }

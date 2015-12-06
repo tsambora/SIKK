@@ -1,5 +1,5 @@
 //
-//  SuspectsCollectionViewCell.swift
+//  FeaturedSuspectsTableViewCell.swift
 //  SIKK
 //
 //  Created by Tino Sambora on 12/6/15.
@@ -7,19 +7,20 @@
 //
 
 import UIKit
-import AlamofireImage
 
-class SuspectsCollectionViewCell: UICollectionViewCell {
+class FeaturedSuspectsTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var viewContainer: UIView!
     @IBOutlet private weak var suspectPhoto: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
-
-        layer.cornerRadius = 2.5
-        layer.masksToBounds = true
-        layer.borderWidth = 2.0
-        layer.borderColor = UIColor(red: 1, green: 0.322, blue: 0.322, alpha: 1).CGColor
+        // Initialization code
+        
+        viewContainer.layer.cornerRadius = 2.5
+        viewContainer.layer.masksToBounds = true
+        viewContainer.layer.borderWidth = 2.0
+        viewContainer.layer.borderColor = UIColor(red: 1, green: 0.322, blue: 0.322, alpha: 1).CGColor
         
         suspectPhoto.layer.cornerRadius = suspectPhoto.bounds.size.width/2
         suspectPhoto.layer.masksToBounds = true
@@ -28,7 +29,12 @@ class SuspectsCollectionViewCell: UICollectionViewCell {
         let urlStr : NSString = imgURL.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
         suspectPhoto?.af_setImageWithURL(NSURL(string:urlStr as String)!)
         suspectPhoto?.contentMode = UIViewContentMode.ScaleAspectFill
-
     }
 
+    override func setSelected(selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
+    }
+    
 }

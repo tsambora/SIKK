@@ -1,5 +1,5 @@
 //
-//  SuspectsViewController.swift
+//  StickersViewController.swift
 //  SIKK
 //
 //  Created by Tino Sambora on 12/6/15.
@@ -8,14 +8,14 @@
 
 import UIKit
 
-class SuspectsViewController: UIViewController {
+class StickersViewController: UIViewController {
     
-    @IBOutlet weak var collectionSuspects: UICollectionView!
+    @IBOutlet weak var collectionStickers: UICollectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        collectionSuspects.registerNib(UINib(nibName: "SuspectsCollectionViewCell", bundle: nil) , forCellWithReuseIdentifier: "cell")
+        collectionStickers.registerNib(UINib(nibName: "StickersCollectionViewCell", bundle: nil) , forCellWithReuseIdentifier: "cell")
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,29 +23,31 @@ class SuspectsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: - Miscellaneous
+    
+    @IBAction private func dismissStickersView(sender: UIButton){
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
 }
 
 // MARK: - <UICollectionViewDataSource> / <UICollectionViewDelegate> / <UICollectionViewDelegateFlowLayout> -
 
-extension SuspectsViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension StickersViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 10
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        return CGSizeMake(collectionSuspects.bounds.size.width - 12, 250)
+        return CGSizeMake(125, 125)
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell:SuspectsCollectionViewCell = collectionSuspects.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! SuspectsCollectionViewCell
-                
+        let cell:StickersCollectionViewCell = collectionStickers.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! StickersCollectionViewCell
+        
         return cell
     }
-    
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        
-        self.performSegueWithIdentifier("presentSuspectDetail", sender: self)
-    }
-    
+
 }
+

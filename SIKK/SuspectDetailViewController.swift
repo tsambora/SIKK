@@ -15,12 +15,14 @@ class SuspectDetailViewController: UIViewController, PagingMenuControllerDelegat
         super.viewDidLoad()
 
         let phase1 = self.storyboard?.instantiateViewControllerWithIdentifier("SuspectInfoViewController") as! SuspectInfoViewController
-        let phase2 = self.storyboard?.instantiateViewControllerWithIdentifier("SuspectStickersViewController") as! SuspectStickersViewController
+        let phase2 = self.storyboard?.instantiateViewControllerWithIdentifier("SuspectInfoViewController") as! SuspectInfoViewController
+        let phase3 = self.storyboard?.instantiateViewControllerWithIdentifier("SuspectStickersViewController") as! SuspectStickersViewController
         
         phase1.title = "Information"
-        phase2.title = "Stickers"
+        phase2.title = "Cases"
+        phase3.title = "Stickers"
         
-        let viewControllers = [phase1, phase2]
+        let viewControllers = [phase1, phase2, phase3]
         
         let options = PagingMenuOptions()
         options.menuHeight = 50
