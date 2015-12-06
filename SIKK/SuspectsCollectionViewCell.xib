@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SuspectsCollectionViewCell" customModule="SIKK" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="187" height="250"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="187" height="250"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U0q-2U-yhl">
+                        <rect key="frame" x="0.0" y="0.0" width="187" height="250"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rp. 999,999,999,999" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogJ-WU-YpK">
+                                <rect key="frame" x="8" y="8" width="171" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="t2i-72-KP9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Muhammad Cobol, Direktur PT Cobol" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F7o-ZC-V9s">
+                                <rect key="frame" x="8" y="195" width="171" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="2DI-M9-DFs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" image="ic_dot" translatesAutoresizingMaskIntoConstraints="NO" id="bpC-VJ-lL0">
+                                <rect key="frame" x="43" y="75" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Ab4-Os-pdK"/>
+                                    <constraint firstAttribute="height" constant="100" id="dEs-DX-DVk"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.32156862749999998" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ogJ-WU-YpK" firstAttribute="top" secondItem="U0q-2U-yhl" secondAttribute="top" constant="8" id="3Ad-LG-OKq"/>
+                            <constraint firstAttribute="trailing" secondItem="F7o-ZC-V9s" secondAttribute="trailing" constant="8" id="B7x-kX-WJk"/>
+                            <constraint firstAttribute="trailing" secondItem="bpC-VJ-lL0" secondAttribute="trailing" constant="44" id="Ca4-DL-Rye"/>
+                            <constraint firstItem="bpC-VJ-lL0" firstAttribute="centerX" secondItem="U0q-2U-yhl" secondAttribute="centerX" id="CcS-gh-gfJ"/>
+                            <constraint firstItem="F7o-ZC-V9s" firstAttribute="top" secondItem="bpC-VJ-lL0" secondAttribute="bottom" constant="20" id="DzG-PM-3S8"/>
+                            <constraint firstItem="bpC-VJ-lL0" firstAttribute="leading" secondItem="U0q-2U-yhl" secondAttribute="leading" constant="43" id="HCv-fM-BLr"/>
+                            <constraint firstAttribute="trailing" secondItem="ogJ-WU-YpK" secondAttribute="trailing" constant="8" id="Hry-rN-FEm"/>
+                            <constraint firstItem="ogJ-WU-YpK" firstAttribute="leading" secondItem="U0q-2U-yhl" secondAttribute="leading" constant="8" id="XT4-aL-Uix"/>
+                            <constraint firstItem="bpC-VJ-lL0" firstAttribute="top" secondItem="ogJ-WU-YpK" secondAttribute="bottom" constant="27" id="ayG-ua-5Xp"/>
+                            <constraint firstItem="F7o-ZC-V9s" firstAttribute="leading" secondItem="U0q-2U-yhl" secondAttribute="leading" constant="8" id="d4g-cb-TaF"/>
+                            <constraint firstAttribute="bottom" secondItem="F7o-ZC-V9s" secondAttribute="bottom" constant="8" id="kjh-EA-kqC"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Ca4-DL-Rye"/>
+                                <exclude reference="HCv-fM-BLr"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="U0q-2U-yhl" secondAttribute="bottom" id="Sqk-Hb-llc"/>
+                <constraint firstItem="U0q-2U-yhl" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="VZf-5K-kRD"/>
+                <constraint firstItem="U0q-2U-yhl" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="eCK-Ms-qVg"/>
+                <constraint firstAttribute="trailing" secondItem="U0q-2U-yhl" secondAttribute="trailing" id="vDl-0q-TPV"/>
+            </constraints>
+            <size key="customSize" width="187" height="250"/>
+            <connections>
+                <outlet property="suspectPhoto" destination="bpC-VJ-lL0" id="rDm-9F-04g"/>
+            </connections>
+            <point key="canvasLocation" x="515.5" y="518"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ic_dot" width="20" height="20"/>
+    </resources>
+</document>
