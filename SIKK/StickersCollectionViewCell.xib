@@ -14,7 +14,11 @@
                 <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_dot" translatesAutoresizingMaskIntoConstraints="NO" id="N4h-XU-0IP">
-                        <rect key="frame" x="65" y="74" width="20" height="20"/>
+                        <rect key="frame" x="43" y="30" width="64" height="64"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="64" id="4oL-li-w0I"/>
+                            <constraint firstAttribute="height" constant="64" id="xca-Qx-uQW"/>
+                        </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sticker name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEv-Kt-PU4">
                         <rect key="frame" x="22" y="113" width="106" height="21"/>
@@ -33,7 +37,7 @@
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
-            <color key="backgroundColor" red="0.97571443260000001" green="0.83524362659999996" blue="0.51212993419999997" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="yEv-Kt-PU4" firstAttribute="top" secondItem="N4h-XU-0IP" secondAttribute="bottom" constant="19" id="9BV-Rn-A84"/>
                 <constraint firstAttribute="bottom" secondItem="yEv-Kt-PU4" secondAttribute="bottom" constant="16" id="OaI-pO-XMv"/>
@@ -47,6 +51,10 @@
                     <exclude reference="bsq-iC-srd"/>
                 </mask>
             </variation>
+            <connections>
+                <outlet property="imageSticker" destination="N4h-XU-0IP" id="n8j-xz-bh2"/>
+                <outlet property="labelName" destination="yEv-Kt-PU4" id="d3z-ZE-tZG"/>
+            </connections>
             <point key="canvasLocation" x="402" y="370"/>
         </collectionViewCell>
     </objects>

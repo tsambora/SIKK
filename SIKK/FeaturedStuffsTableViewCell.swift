@@ -9,6 +9,9 @@
 import UIKit
 
 class FeaturedStuffsTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var labelName: UILabel!
+    @IBOutlet weak var labelDesc: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

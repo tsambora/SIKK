@@ -11,7 +11,11 @@ import AlamofireImage
 
 class SuspectsCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet private weak var suspectPhoto: UIImageView!
+    @IBOutlet weak var suspectPhoto: UIImageView!
+    
+    @IBOutlet weak var viewContainer: UIView!
+    @IBOutlet weak var labelBounty: UILabel!
+    @IBOutlet weak var labelDesc: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

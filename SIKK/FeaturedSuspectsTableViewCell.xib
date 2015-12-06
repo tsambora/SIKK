@@ -77,6 +77,8 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="labelBounty" destination="63r-LB-sg4" id="SHa-EN-9mD"/>
+                <outlet property="labelDesc" destination="gZa-C4-oRL" id="gpY-4A-nv7"/>
                 <outlet property="suspectPhoto" destination="zHi-o5-Dbk" id="R8P-4Y-3Sa"/>
                 <outlet property="viewContainer" destination="qRj-aM-uKh" id="cRt-Pe-D1D"/>
             </connections>

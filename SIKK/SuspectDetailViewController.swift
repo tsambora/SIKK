@@ -10,19 +10,53 @@ import UIKit
 import PagingMenuController
 
 class SuspectDetailViewController: UIViewController, PagingMenuControllerDelegate {
+    
+    @IBOutlet weak var labelBounty: UILabel!
+    @IBOutlet weak var labelDesc: UILabel!
+    @IBOutlet weak var suspectPhoto: UIImageView!
+    
+    var suspectDetail: Suspect!
+    var suspectIndex: Int?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let phase1 = self.storyboard?.instantiateViewControllerWithIdentifier("SuspectInfoViewController") as! SuspectInfoViewController
-        let phase2 = self.storyboard?.instantiateViewControllerWithIdentifier("SuspectInfoViewController") as! SuspectInfoViewController
-        let phase3 = self.storyboard?.instantiateViewControllerWithIdentifier("SuspectStickersViewController") as! SuspectStickersViewController
         
-        phase1.title = "Information"
-        phase2.title = "Cases"
-        phase3.title = "Stickers"
+        labelBounty?.text = suspectDetail.bounty
+        labelDesc?.text = "\(suspectDetail.name!), \(suspectDetail.title!)."
         
-        let viewControllers = [phase1, phase2, phase3]
+        suspectPhoto.layer.cornerRadius = suspectPhoto.bounds.size.width/2
+        suspectPhoto.layer.masksToBounds = true
+        let imgURL = "http://www.differencebetween.info/sites/default/files/images_articles_d7_1/muhammad.jpg"
+        let urlStr : NSString = imgURL.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
+        suspectPhoto?.af_setImageWithURL(NSURL(string:urlStr as String)!)
+        suspectPhoto?.contentMode = UIViewContentMode.ScaleAspectFill
+        
+        var viewControllers: [UIViewController] = []
+        
+        for index in 0...2 {
+            switch (index){
+                case 0:
+                    let phase = self.storyboard?.instantiateViewControllerWithIdentifier("SuspectInfoViewController") as! SuspectInfoViewController
+                    phase.title = "Informasi"
+                    phase.labelDescText = suspectDetail.info
+                    viewControllers.append(phase)
+                    break
+                case 1:
+                    let phase = self.storyboard?.instantiateViewControllerWithIdentifier("SuspectInfoViewController") as! SuspectInfoViewController
+                    phase.title = "Kasus"
+                    phase.labelDescText = suspectDetail.cases
+                    viewControllers.append(phase)
+                    break
+                case 2:
+                    let phase = self.storyboard?.instantiateViewControllerWithIdentifier("SuspectStickersViewController") as! SuspectStickersViewController
+                    phase.title = "Stickers"
+                    phase.suspectIndex = suspectIndex
+                    viewControllers.append(phase)
+                    break
+                default:
+                    break
+                }
+        }
         
         let options = PagingMenuOptions()
         options.menuHeight = 50

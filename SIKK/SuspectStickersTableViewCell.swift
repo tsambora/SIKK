@@ -9,6 +9,9 @@
 import UIKit
 
 class SuspectStickersTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var labelNum: UILabel!
+    @IBOutlet weak var imageSticker: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()

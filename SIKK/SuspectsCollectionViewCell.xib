@@ -74,6 +74,8 @@
             </constraints>
             <size key="customSize" width="187" height="250"/>
             <connections>
+                <outlet property="labelBounty" destination="ogJ-WU-YpK" id="6Se-vP-CRl"/>
+                <outlet property="labelDesc" destination="F7o-ZC-V9s" id="3Pr-AK-pQp"/>
                 <outlet property="suspectPhoto" destination="bpC-VJ-lL0" id="rDm-9F-04g"/>
             </connections>
             <point key="canvasLocation" x="515.5" y="518"/>

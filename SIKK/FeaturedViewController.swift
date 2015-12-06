@@ -40,7 +40,7 @@ extension FeaturedViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch (section){
             case 0:
-                return 4
+                return hotCases.count
             case 1:
                 return 3
             case 2:
@@ -80,15 +80,29 @@ extension FeaturedViewController: UITableViewDelegate, UITableViewDataSource {
         switch (indexPath.section){
             case 0:
                 let cell:FeaturedStuffsTableViewCell = tableFeatured.dequeueReusableCellWithIdentifier("stuffCell") as! FeaturedStuffsTableViewCell
+                cell.labelName.text = hotCases[indexPath.row].title
+                cell.labelDesc.text = hotCases[indexPath.row].desc
                 return cell
             case 1:
                 let cell:CasesTableViewCell = tableFeatured.dequeueReusableCellWithIdentifier("caseCell") as! CasesTableViewCell
+                cell.labelTitle.text = cases[indexPath.row].title
+                cell.labelSuspects.text = cases[indexPath.row].suspects
+                cell.labelWatchers.text = cases[indexPath.row].watchers
+                cell.labelTimeUploaded.text = cases[indexPath.row].timeUploaded
                 return cell
             case 2:
                 let cell:FeaturedSuspectsTableViewCell = tableFeatured.dequeueReusableCellWithIdentifier("suspectCell") as! FeaturedSuspectsTableViewCell
+                cell.labelBounty.text = suspects[indexPath.row].bounty
+                cell.labelDesc.text = "\(suspects[indexPath.row].name!), \(suspects[indexPath.row].title!)"
+                
+                let imgURL = "http://www.differencebetween.info/sites/default/files/images_articles_d7_1/muhammad.jpg"
+                let urlStr : NSString = imgURL.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
+                cell.suspectPhoto?.af_setImageWithURL(NSURL(string:urlStr as String)!)
+                cell.suspectPhoto?.contentMode = UIViewContentMode.ScaleAspectFill
                 return cell
             case 3:
                 let cell:FeaturedTriviasTableViewCell = tableFeatured.dequeueReusableCellWithIdentifier("triviaCell") as! FeaturedTriviasTableViewCell
+                cell.labelTrivia.text = trivias[indexPath.row]
                 return cell
             default:
                 let cell:FeaturedStuffsTableViewCell = tableFeatured.dequeueReusableCellWithIdentifier("stuffCell") as! FeaturedStuffsTableViewCell
@@ -105,7 +119,7 @@ extension FeaturedViewController: UITableViewDelegate, UITableViewDataSource {
             case 0:
                 return CGFloat(300)
             case 1:
-                return CGFloat(120)
+                return CGFloat(100)
             case 2:
                 return CGFloat(250)
             case 3:

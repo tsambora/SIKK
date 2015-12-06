@@ -28,6 +28,11 @@
 		1F5EC99F1C13F48900C272B4 /* SuspectsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5EC99D1C13F48900C272B4 /* SuspectsCollectionViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 		1F5EC9A01C13F48900C272B4 /* SuspectsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F5EC99E1C13F48900C272B4 /* SuspectsCollectionViewCell.xib */; settings = {ASSET_TAGS = (); }; };
 		1F5EC9A21C14010800C272B4 /* SuspectDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5EC9A11C14010800C272B4 /* SuspectDetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		1F712D361C148C1200CECF3C /* HotCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F712D351C148C1200CECF3C /* HotCase.swift */; settings = {ASSET_TAGS = (); }; };
+		1F712D381C148D6100CECF3C /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F712D371C148D6100CECF3C /* Data.swift */; settings = {ASSET_TAGS = (); }; };
+		1F712D3A1C148E0800CECF3C /* Case.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F712D391C148E0800CECF3C /* Case.swift */; settings = {ASSET_TAGS = (); }; };
+		1F712D3C1C148FE000CECF3C /* CasePhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F712D3B1C148FE000CECF3C /* CasePhase.swift */; settings = {ASSET_TAGS = (); }; };
+		1F712D3E1C14919400CECF3C /* Suspect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F712D3D1C14919400CECF3C /* Suspect.swift */; settings = {ASSET_TAGS = (); }; };
 		1F97D2CC1C121B27009B8BF3 /* CaseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F97D2CB1C121B27009B8BF3 /* CaseDetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		1FA08F3A1C11E976008AFA1F /* CasesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA08F391C11E976008AFA1F /* CasesViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		1FA08F3D1C11ED29008AFA1F /* CasesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA08F3B1C11ED29008AFA1F /* CasesTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
@@ -62,6 +67,11 @@
 		1F5EC99D1C13F48900C272B4 /* SuspectsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuspectsCollectionViewCell.swift; sourceTree = "<group>"; };
 		1F5EC99E1C13F48900C272B4 /* SuspectsCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SuspectsCollectionViewCell.xib; sourceTree = "<group>"; };
 		1F5EC9A11C14010800C272B4 /* SuspectDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuspectDetailViewController.swift; sourceTree = "<group>"; };
+		1F712D351C148C1200CECF3C /* HotCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotCase.swift; sourceTree = "<group>"; };
+		1F712D371C148D6100CECF3C /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		1F712D391C148E0800CECF3C /* Case.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Case.swift; sourceTree = "<group>"; };
+		1F712D3B1C148FE000CECF3C /* CasePhase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CasePhase.swift; sourceTree = "<group>"; };
+		1F712D3D1C14919400CECF3C /* Suspect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Suspect.swift; sourceTree = "<group>"; };
 		1F97D2CB1C121B27009B8BF3 /* CaseDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaseDetailViewController.swift; sourceTree = "<group>"; };
 		1FA08F391C11E976008AFA1F /* CasesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CasesViewController.swift; sourceTree = "<group>"; };
 		1FA08F3B1C11ED29008AFA1F /* CasesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CasesTableViewCell.swift; sourceTree = "<group>"; };
@@ -93,6 +103,10 @@
 		1FA08F311C11E7F5008AFA1F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1F712D351C148C1200CECF3C /* HotCase.swift */,
+				1F712D391C148E0800CECF3C /* Case.swift */,
+				1F712D3B1C148FE000CECF3C /* CasePhase.swift */,
+				1F712D3D1C14919400CECF3C /* Suspect.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -131,6 +145,7 @@
 		1FA08F351C11E827008AFA1F /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				1F712D371C148D6100CECF3C /* Data.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -356,17 +371,22 @@
 				1FA08F3A1C11E976008AFA1F /* CasesViewController.swift in Sources */,
 				1F2400811C1456790009CDA6 /* FeaturedSuspectsTableViewCell.swift in Sources */,
 				1FE8369E1C11E68A007A84A2 /* AppDelegate.swift in Sources */,
+				1F712D361C148C1200CECF3C /* HotCase.swift in Sources */,
+				1F712D3C1C148FE000CECF3C /* CasePhase.swift in Sources */,
 				1F5EC99F1C13F48900C272B4 /* SuspectsCollectionViewCell.swift in Sources */,
 				1F5EC99A1C13F2CB00C272B4 /* SuspectsViewController.swift in Sources */,
 				1F2400891C1456D80009CDA6 /* FeaturedStuffsTableViewCell.swift in Sources */,
 				1F2400771C1443040009CDA6 /* StickersCollectionViewCell.swift in Sources */,
+				1F712D381C148D6100CECF3C /* Data.swift in Sources */,
 				1F4C046A1C141F9400D29D67 /* SuspectStickersTableViewCell.swift in Sources */,
 				1FFFF63C1C12F86600CC619F /* CasePhaseViewController.swift in Sources */,
 				1FA08F3D1C11ED29008AFA1F /* CasesTableViewCell.swift in Sources */,
 				1F24007A1C1454110009CDA6 /* FeaturedViewController.swift in Sources */,
 				1F24008C1C1459910009CDA6 /* FeaturedTableViewHeaderCell.swift in Sources */,
+				1F712D3E1C14919400CECF3C /* Suspect.swift in Sources */,
 				1F97D2CC1C121B27009B8BF3 /* CaseDetailViewController.swift in Sources */,
 				1F2400741C1435450009CDA6 /* StickersViewController.swift in Sources */,
+				1F712D3A1C148E0800CECF3C /* Case.swift in Sources */,
 				1F5EC9A21C14010800C272B4 /* SuspectDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

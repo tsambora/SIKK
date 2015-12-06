@@ -9,6 +9,9 @@
 import UIKit
 
 class StickersCollectionViewCell: UICollectionViewCell {
+    
+    @IBOutlet weak var labelName: UILabel!
+    @IBOutlet weak var imageSticker: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()

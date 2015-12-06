@@ -9,6 +9,12 @@
 import UIKit
 
 class CasesTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var labelTitle: UILabel!
+    @IBOutlet weak var labelSuspects: UILabel!
+    @IBOutlet weak var labelWatchers: UILabel!
+    @IBOutlet weak var labelTimeUploaded: UILabel!
+    @IBOutlet weak var imageBadge: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -43,6 +43,10 @@
                     <constraint firstAttribute="trailing" secondItem="Knb-3Q-VlT" secondAttribute="trailing" constant="8" id="X9K-tG-S0b"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="labelDesc" destination="6O8-uE-Ily" id="PjP-dX-yok"/>
+                <outlet property="labelName" destination="Knb-3Q-VlT" id="f7U-UV-boh"/>
+            </connections>
             <point key="canvasLocation" x="432" y="446"/>
         </tableViewCell>
     </objects>

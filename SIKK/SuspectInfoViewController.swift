@@ -9,11 +9,14 @@
 import UIKit
 
 class SuspectInfoViewController: UIViewController {
-
+    
+    @IBOutlet weak var labelDesc: UILabel!
+    var labelDescText: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        labelDesc?.text = labelDescText
     }
 
     override func didReceiveMemoryWarning() {

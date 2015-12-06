@@ -35,14 +35,14 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5dp-BM-ej6">
                         <rect key="frame" x="53" y="0.0" width="267" height="100"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Papi ingin saham" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOb-OU-hWe">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Papi ingin saham" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOb-OU-hWe">
                                 <rect key="frame" x="0.0" y="8" width="251" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="749" text="Setya Novanto, Muhammad Cobol" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RGb-tK-3gZ">
-                                <rect key="frame" x="0.0" y="40" width="251" height="18"/>
+                                <rect key="frame" x="0.0" y="40" width="233" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -115,6 +115,13 @@
                     <constraint firstAttribute="bottom" secondItem="Ub1-fF-hlt" secondAttribute="bottom" id="weo-Js-Lso"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="imageBadge" destination="sUq-o2-MgT" id="Yme-I7-eVr"/>
+                <outlet property="labelSuspects" destination="RGb-tK-3gZ" id="Cdy-Ac-JZR"/>
+                <outlet property="labelTimeUploaded" destination="hxD-NX-SyG" id="pjZ-HM-iPu"/>
+                <outlet property="labelTitle" destination="rOb-OU-hWe" id="a1v-oz-Lsz"/>
+                <outlet property="labelWatchers" destination="fjG-qL-VBC" id="JYY-a2-8C6"/>
+            </connections>
             <point key="canvasLocation" x="459" y="446.5"/>
         </tableViewCell>
     </objects>

@@ -11,6 +11,7 @@ import UIKit
 class CasesViewController: UIViewController {
     
     @IBOutlet private weak var tableCases: UITableView!
+    var caseIndex: Int?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,13 @@ class CasesViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "presentCaseDetail") {
+            let viewController:CaseDetailViewController = segue.destinationViewController as! CaseDetailViewController
+            viewController.caseDetail = cases[caseIndex!]
+        }
+    }
+    
 }
 
 // MARK: - <UITableViewDataSource> / <UITableViewDelegate> -
@@ -30,12 +38,15 @@ class CasesViewController: UIViewController {
 extension CasesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20;
+        return cases.count;
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell:CasesTableViewCell = tableCases.dequeueReusableCellWithIdentifier("cell") as! CasesTableViewCell
-        
+        cell.labelTitle.text = cases[indexPath.row].title
+        cell.labelSuspects.text = cases[indexPath.row].suspects
+        cell.labelWatchers.text = cases[indexPath.row].watchers
+        cell.labelTimeUploaded.text = cases[indexPath.row].timeUploaded
         return cell
     }
     
@@ -44,6 +55,7 @@ extension CasesViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        caseIndex = indexPath.row
         performSegueWithIdentifier("presentCaseDetail", sender: self)
     }
 

@@ -30,6 +30,9 @@
                     <constraint firstAttribute="trailing" secondItem="UP8-Nu-Bbh" secondAttribute="trailing" constant="8" id="x4D-Uu-LEb"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="labelTrivia" destination="UP8-Nu-Bbh" id="q7P-Sh-JHK"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>

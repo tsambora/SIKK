@@ -9,6 +9,8 @@
 import UIKit
 
 class FeaturedTriviasTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var labelTrivia:UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
